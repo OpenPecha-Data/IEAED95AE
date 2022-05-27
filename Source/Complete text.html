@@ -1,0 +1,642 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1177' accesskey='1'>RK: Bodhisatvapiṭaka, BMSC IV, Tibetan</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>RK: Bodhisatvapiṭaka, BMSC IV, Tibetan<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1177[6307]" value="6307" id="lancheckbox" checked >Tibetan: Bspṭ tib (BMSC IV)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1177">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1177">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1177'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1177">Search in RK: Bodhisatvapiṭaka, BMSC IV, Tibetan</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1177'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1177'>RK: Bodhisatvapiṭaka, BMSC IV, Tibetan</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1177" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value=".|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_." border=0 hspace=2><a id="href_." href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1177&mid=&level=&cid=" class="ajax_tree0">
+</td></tr></table>
+<script language=javascript>test('.|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1177&amp;mid=1993246">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1177&amp;cid=&amp;mid=1993246">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1177&amp;cid=&amp;mid=1993246">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962202bi' class='paragraph'>
+								de nas bcom ldan ’das<a class='fotnote cn' name='FN6307cn1' href='#N6307cn1'><sup>1</sup></a>
+ kyis<a class='fotnote cn' name='FN6307cn2' href='#N6307cn2'><sup>2</sup></a>
+ de’i tshe<a class='fotnote cn' name='FN6307cn3' href='#N6307cn3'><sup>3</sup></a>
+ tshigs su bcad pa ’di dag gsungs so<a class='fotnote cn' name='FN6307cn4' href='#N6307cn4'><sup>4</sup></a>
+ ||&nbsp;</span></div><div style='' id='1' class='note cn'>1.<a class="internt" name='N6307cn1' href='#FN6307cn1'> om. B2B3DSF1F2GoHHeJLNQUZ: pa B1</a>&nbsp; 2.<a class="internt" name='N6307cn2' href='#FN6307cn2'> kyis B2B3DSF1F2GoHHeJNQUZ: kyi B1: kyis | L</a>&nbsp; 3.<a class="internt" name='N6307cn3' href='#FN6307cn3'> tshe B1B2DSF1F2GoHJLNQUZ: om. B3He</a>&nbsp; 4.<a class="internt" name='N6307cn4' href='#FN6307cn4'> gsungs so B2DSF1F2GoHHeJLNQUZ: gsungso B1B3</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962203bi' class='paragraph'>
+								las ni<a class='fotnote cn' name='FN6307cn5' href='#N6307cn5'><sup>5</sup></a>
+ rna<a class='fotnote cn' name='FN6307cn6' href='#N6307cn6'><sup>6</sup></a>
+ pa ’di lnga<a class='fotnote cn' name='FN6307cn7' href='#N6307cn7'><sup>7</sup></a>
+ ste || des ni shes rab mi<a class='fotnote cn' name='FN6307cn8' href='#N6307cn8'><sup>8</sup></a>
+ ’phel<a class='fotnote cn' name='FN6307cn9' href='#N6307cn9'><sup>9</sup></a>
+ ’gyur ||<br />blo yang myur du<a class='fotnote cn' name='FN6307cn10' href='#N6307cn10'><sup>10</sup></a>
+ ma rung<a class='fotnote cn' name='FN6307cn11' href='#N6307cn11'><sup>11</sup></a>
+ ’gyur || mi<a class='fotnote cn' name='FN6307cn12' href='#N6307cn12'><sup>12</sup></a>
+ mchog rnams ni mnyes mi<a class='fotnote cn' name='FN6307cn13' href='#N6307cn13'><sup>13</sup></a>
+ byed || a&nbsp;</span></div><div style='' id='2' class='note cn'>5.<a class="internt" name='N6307cn5' href='#FN6307cn5'> ni B1B2B3DSF2GoHHeJLNQUZ: kyi F1</a>&nbsp; 6.<a class="internt" name='N6307cn6' href='#FN6307cn6'> rnam B1B2B3DSF1F2HHeJLNQUZ: rnaṃ Go</a>&nbsp; 7.<a class="internt" name='N6307cn7' href='#FN6307cn7'> lnga DSF2GoLNU: lta B1B2B3F1HHeJQZ</a>&nbsp; 8.<a class="internt" name='N6307cn8' href='#FN6307cn8'> mi B1B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 9.<a class="internt" name='N6307cn9' href='#FN6307cn9'> ’phel B1B2B3DSF1F2GoHHeJLNQU: phel Z</a>&nbsp; 10.<a class="internt" name='N6307cn10' href='#FN6307cn10'> myur du B1B2B3DSF1F2HHeJLNQUZ: myurd tu Go</a>&nbsp; 11.<a class="internt" name='N6307cn11' href='#FN6307cn11'> rung B1B2B3DSF1GoHHeJLNQUZ: rungs F2</a>&nbsp; 12.<a class="internt" name='N6307cn12' href='#FN6307cn12'> mi B1B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 13.<a class="internt" name='N6307cn13' href='#FN6307cn13'> mnyes mi DSF1F2HJLNQUZ: mi mnyes B1B2B3He: gnyes myi Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962204bi' class='paragraph'>
+								de<a class='fotnote cn' name='FN6307cn14' href='#N6307cn14'><sup>14</sup></a>
+ ni<a class='fotnote cn' name='FN6307cn15' href='#N6307cn15'><sup>15</sup></a>
+ sems can slu ba ste ||<a class='fotnote cn' name='FN6307cn16' href='#N6307cn16'><sup>16</sup></a>
+ pho brang ’khor<a class='fotnote cn' name='FN6307cn17' href='#N6307cn17'><sup>17</sup></a>
+ gyi bkrabs pa<a class='fotnote cn' name='FN6307cn18' href='#N6307cn18'><sup>18</sup></a>
+ ltar ||<br />mi<a class='fotnote cn' name='FN6307cn19' href='#N6307cn19'><sup>19</sup></a>
+ dge rtsa ba de dag gis || ’jig rten mgon<a class='fotnote cn' name='FN6307cn20' href='#N6307cn20'><sup>20</sup></a>
+ po mi<a class='fotnote cn' name='FN6307cn21' href='#N6307cn21'><sup>21</sup></a>
+ mthong ngo || b&nbsp;</span></div><div style='' id='3' class='note cn'>14.<a class="internt" name='N6307cn14' href='#FN6307cn14'> de DSF1F2GoHHeJNQUZ: des B1B2B3L</a>&nbsp; 15.<a class="internt" name='N6307cn15' href='#FN6307cn15'> ni B1B2B3DSF1F2GoHHeLQUZ: na N</a>&nbsp; 16.<a class="internt" name='N6307cn16' href='#FN6307cn16'> ste || DF1F2GoHLNQUZ: ste | B2B3HeS</a>&nbsp; 17.<a class="internt" name='N6307cn17' href='#FN6307cn17'> ’khor B2B3DSF1F2HHeJLNQUZ: ’khord Go</a>&nbsp; 18.<a class="internt" name='N6307cn18' href='#FN6307cn18'> bkrabs pa DSGoHJNUZ: dpa’ po F1Q: bkram pa F2: bkrab pa B2B3HeL</a>&nbsp; 19.<a class="internt" name='N6307cn19' href='#FN6307cn19'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 20.<a class="internt" name='N6307cn20' href='#FN6307cn20'> mgon B2B3DSF1F2HHeJLNQUZ: ’gon Go</a>&nbsp; 21.<a class="internt" name='N6307cn21' href='#FN6307cn21'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962205bi' class='paragraph'>
+								bdag gis phrogs shig<a class='fotnote cn' name='FN6307cn22' href='#N6307cn22'><sup>22</sup></a>
+ longs<a class='fotnote cn' name='FN6307cn23' href='#N6307cn23'><sup>23</sup></a>
+ shig<a class='fotnote cn' name='FN6307cn24' href='#N6307cn24'><sup>24</sup></a>
+ ces ||<a class='fotnote cn' name='FN6307cn25' href='#N6307cn25'><sup>25</sup></a>
+ sems can rnams la ’jigs bskyed<a class='fotnote cn' name='FN6307cn26' href='#N6307cn26'><sup>26</sup></a>
+ dang<a class='fotnote cn' name='FN6307cn27' href='#N6307cn27'><sup>27</sup></a>
+ |<br />nyes pa’i las rnams<a class='fotnote cn' name='FN6307cn28' href='#N6307cn28'><sup>28</sup></a>
+ byas<a class='fotnote cn' name='FN6307cn29' href='#N6307cn29'><sup>29</sup></a>
+ gyur<a class='fotnote cn' name='FN6307cn30' href='#N6307cn30'><sup>30</sup></a>
+ nas || mi<a class='fotnote cn' name='FN6307cn31' href='#N6307cn31'><sup>31</sup></a>
+ mchog rnams<a class='fotnote cn' name='FN6307cn32' href='#N6307cn32'><sup>32</sup></a>
+ ni mnyes mi<a class='fotnote cn' name='FN6307cn33' href='#N6307cn33'><sup>33</sup></a>
+ byed || c&nbsp;</span></div><div style='' id='4' class='note cn'>22.<a class="internt" name='N6307cn22' href='#FN6307cn22'> shig DF1JLNQU: shog S: shing B2B3F2GoHeZ</a>&nbsp; 23.<a class="internt" name='N6307cn23' href='#FN6307cn23'> longs DSHJLUZ: long B2B3F1F2GoHeNQ</a>&nbsp; 24.<a class="internt" name='N6307cn24' href='#FN6307cn24'> cig DSF1F2HJNQU: cing Z: shig B2B3GoHeL</a>&nbsp; 25.<a class="internt" name='N6307cn25' href='#FN6307cn25'> ces || B2DF1F2GoHHeLNQUZ: ces | B3JS</a>&nbsp; 26.<a class="internt" name='N6307cn26' href='#FN6307cn26'> bskyed B2B3DSF1F2GoHHeJLNQU: skyed Z</a>&nbsp; 27.<a class="internt" name='N6307cn27' href='#FN6307cn27'> dang DSF2GoJLQUZ: nas F1: de HN: ltar B2B3He</a>&nbsp; 28.<a class="internt" name='N6307cn28' href='#FN6307cn28'> rnams B2B3DSF1F2HHeJLNQUZ: rnaṃs Go</a>&nbsp; 29.<a class="internt" name='N6307cn29' href='#FN6307cn29'> byas B2B3DSF1GoHHeJLNQUZ: byang F2</a>&nbsp; 30.<a class="internt" name='N6307cn30' href='#FN6307cn30'> gyur B2B3DSF1F2HHeJLNQUZ: gyurd Go</a>&nbsp; 31.<a class="internt" name='N6307cn31' href='#FN6307cn31'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 32.<a class="internt" name='N6307cn32' href='#FN6307cn32'> rnams B2B3DSF1F2HHeJLNQUZ: rnaṃs Go</a>&nbsp; 33.<a class="internt" name='N6307cn33' href='#FN6307cn33'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962206bi' class='paragraph'>
+								dge slong<a class='fotnote cn' name='FN6307cn34' href='#N6307cn34'><sup>34</sup></a>
+ dang ni<a class='fotnote cn' name='FN6307cn35' href='#N6307cn35'><sup>35</sup></a>
+ dge slong ma || tshul khrims nyams byas<a class='fotnote cn' name='FN6307cn36' href='#N6307cn36'><sup>36</sup></a>
+ sdug bsngal gyur<a class='fotnote cn' name='FN6307cn37' href='#N6307cn37'><sup>37</sup></a>
+ ||<br />sangs rgyas mang po mnyes mi<a class='fotnote cn' name='FN6307cn38' href='#N6307cn38'><sup>38</sup></a>
+ byed || de la dal ba rnyed par<a class='fotnote cn' name='FN6307cn39' href='#N6307cn39'><sup>39</sup></a>
+ dka’<a class='fotnote cn' name='FN6307cn40' href='#N6307cn40'><sup>40</sup></a>
+ || d&nbsp;</span></div><div style='' id='5' class='note cn'>34.<a class="internt" name='N6307cn34' href='#FN6307cn34'> om. DSF1F2GoHJLNQUZ: pha B2B3He</a>&nbsp; 35.<a class="internt" name='N6307cn35' href='#FN6307cn35'> dang ni DF1F2GoHJLNQUZ: dag dang S: dang B2B3He</a>&nbsp; 36.<a class="internt" name='N6307cn36' href='#FN6307cn36'> byas B2B3DSHHeJLNQUZ: pa F1: pas F2: kyang Go</a>&nbsp; 37.<a class="internt" name='N6307cn37' href='#FN6307cn37'> gyur B2B3DF2HeJLQU: ’gyur F1SHNZ: gyurd Go</a>&nbsp; 38.<a class="internt" name='N6307cn38' href='#FN6307cn38'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 39.<a class="internt" name='N6307cn39' href='#FN6307cn39'> rnyed par B2B3DSF1F2HJLNQU: rnyed pa rnyed par Z: brnyed par Go: rnyed ‹par(added below)› He</a>&nbsp; 40.<a class="internt" name='N6307cn40' href='#FN6307cn40'> dka’ B2B3DF1GoSHHeJLNQUZ: bka’ F2</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962207bi' class='paragraph'>
+								pha<a class='fotnote cn' name='FN6307cn41' href='#N6307cn41'><sup>41</sup></a>
+ dang ma dang chung ma rnams<a class='fotnote cn' name='FN6307cn42' href='#N6307cn42'><sup>42</sup></a>
+ || chos spyod pa yi<a class='fotnote cn' name='FN6307cn43' href='#N6307cn43'><sup>43</sup></a>
+ bgegs byed de<a class='fotnote cn' name='FN6307cn44' href='#N6307cn44'><sup>44</sup></a>
+ ||<br />myur du<a class='fotnote cn' name='FN6307cn45' href='#N6307cn45'><sup>45</sup></a>
+ chos kyang mi<a class='fotnote cn' name='FN6307cn46' href='#N6307cn46'><sup>46</sup></a>
+ thos shing || gti mug gis ni bsgribs<a class='fotnote cn' name='FN6307cn47' href='#N6307cn47'><sup>47</sup></a>
+ par ’gyur || e&nbsp;</span></div><div style='' id='6' class='note cn'>41.<a class="internt" name='N6307cn41' href='#FN6307cn41'> pha B2B3DSF1F2GoHHeJLNUZ: pa Q</a>&nbsp; 42.<a class="internt" name='N6307cn42' href='#FN6307cn42'> rnams B2B3DSF1F2HHeJLNQUZ: rnaṃs Go</a>&nbsp; 43.<a class="internt" name='N6307cn43' href='#FN6307cn43'> yi B2B3DSHHeJNQUZ: ’i F1F2GoL</a>&nbsp; 44.<a class="internt" name='N6307cn44' href='#FN6307cn44'> byed de B3DSF1F2GoHHeJLNQUZ: byede B2</a>&nbsp; 45.<a class="internt" name='N6307cn45' href='#FN6307cn45'> myur du B2B3DSF1F2HHeJLNQUZ: myurd tu Go</a>&nbsp; 46.<a class="internt" name='N6307cn46' href='#FN6307cn46'> mi B2B3DSF1F2HHeJLNQUZ: myi Go</a>&nbsp; 47.<a class="internt" name='N6307cn47' href='#FN6307cn47'> bsgribs B2B3DSF1F2GoHHeJNQUZ: bsgrib L</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962208bi' class='paragraph'>
+								rab tu ’byung bar<a class='fotnote cn' name='FN6307cn48' href='#N6307cn48'><sup>48</sup></a>
+ ’gro ba la<a class='fotnote cn' name='FN6307cn49' href='#N6307cn49'><sup>49</sup></a>
+ || bar<a class='fotnote cn' name='FN6307cn50' href='#N6307cn50'><sup>50</sup></a>
+ du gcod pa<a class='fotnote cn' name='FN6307cn51' href='#N6307cn51'><sup>51</sup></a>
+ byas<a class='fotnote cn' name='FN6307cn52' href='#N6307cn52'><sup>52</sup></a>
+ gyur<a class='fotnote cn' name='FN6307cn53' href='#N6307cn53'><sup>53</sup></a>
+ nas ||<br />sangs rgyas mang po mnyes mi<a class='fotnote cn' name='FN6307cn54' href='#N6307cn54'><sup>54</sup></a>
+ byed || de la dal ba mi ’byung ngo<a class='fotnote cn' name='FN6307cn55' href='#N6307cn55'><sup>55</sup></a>
+ || f&nbsp;</span></div><div style='' id='7' class='note cn'>48.<a class="internt" name='N6307cn48' href='#FN6307cn48'> bar B2B3DSF1F2HHeJLNQUZ: ba’i Go</a>&nbsp; 49.<a class="internt" name='N6307cn49' href='#FN6307cn49'> ’gro ba la A2B2B3DSF1GoHHeJLNQUZ: ’grol las F2</a>&nbsp; 50.<a class="internt" name='N6307cn50' href='#FN6307cn50'> bar B2B3DSF1F2GoHHeJNQUZ: rab L</a>&nbsp; 51.<a class="internt" name='N6307cn51' href='#FN6307cn51'> pa B2B3DSF1F2HHeJLNQUZ: par Go</a>&nbsp; 52.<a class="internt" name='N6307cn52' href='#FN6307cn52'> byas A2B2B3DSF1GoHHeJLNQUZ: byas pa F2</a>&nbsp; 53.<a class="internt" name='N6307cn53' href='#FN6307cn53'> gyur B2B3DSF1F2HHeJLNQUZ: gyurd A2Go</a>&nbsp; 54.<a class="internt" name='N6307cn54' href='#FN6307cn54'> mi B2B3DSF1HHeJLNQUZ: ma F2: myi A2Go</a>&nbsp; 55.<a class="internt" name='N6307cn55' href='#FN6307cn55'> de la dal ba mi ’byung ṇo B2B3DSHHeJLNUZ: de la dal ba mi ’gyur ro F2: dal ba dag tu mi ’gyur ro F1Q: de la dal ba myi ’byung ngo A2Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962209bi' class='paragraph'>
+								gang du stong pa<a class='fotnote cn' name='FN6307cn56' href='#N6307cn56'><sup>56</sup></a>
+ nyid bsngags pa<a class='fotnote cn' name='FN6307cn57' href='#N6307cn57'><sup>57</sup></a>
+ || ’di lta<a class='fotnote cn' name='FN6307cn58' href='#N6307cn58'><sup>58</sup></a>
+ bu yi<a class='fotnote cn' name='FN6307cn59' href='#N6307cn59'><sup>59</sup></a>
+ chos thos nas ||<br />khro<a class='fotnote cn' name='FN6307cn60' href='#N6307cn60'><sup>60</sup></a>
+ ba dag ni<a class='fotnote cn' name='FN6307cn61' href='#N6307cn61'><sup>61</sup></a>
+ nyer<a class='fotnote cn' name='FN6307cn62' href='#N6307cn62'><sup>62</sup></a>
+ len<a class='fotnote cn' name='FN6307cn63' href='#N6307cn63'><sup>63</sup></a>
+ cing || ’di ni chos min zhes kyang smra<a class='fotnote cn' name='FN6307cn64' href='#N6307cn64'><sup>64</sup></a>
+ || g&nbsp;</span></div><div style='' id='8' class='note cn'>56.<a class="internt" name='N6307cn56' href='#FN6307cn56'> stong pa A2B2B3DSF1F2HHeJLNQUZ: stong Go</a>&nbsp; 57.<a class="internt" name='N6307cn57' href='#FN6307cn57'> bsngags pa DSHJU: bsngags pa’i A2B2B3F1GoHeLNZ: sngags pa’i F2Q</a>&nbsp; 58.<a class="internt" name='N6307cn58' href='#FN6307cn58'> om. A2B3DSF1F2GoHHeJLNQUZ: ste (deleted?) B2</a>&nbsp; 59.<a class="internt" name='N6307cn59' href='#FN6307cn59'> yi B2(deleted?)B3DSHHeJNQU: ’i A2GoF1F2LZ</a>&nbsp; 60.<a class="internt" name='N6307cn60' href='#FN6307cn60'> khro A2B2B3DSF1F2HHeJLNQUZ: ’khro Go</a>&nbsp; 61.<a class="internt" name='N6307cn61' href='#FN6307cn61'> ni DJLSU: gis F1: gi A2B2B3F2GoHeNQZ</a>&nbsp; 62.<a class="internt" name='N6307cn62' href='#FN6307cn62'> nyer DHJU: nyes A2B2B3SF1GoHeLNQZ: nye F2</a>&nbsp; 63.<a class="internt" name='N6307cn63' href='#FN6307cn63'> len B2B3DSF1F2HHeJLNQUZ: lend A2Go</a>&nbsp; 64.<a class="internt" name='N6307cn64' href='#FN6307cn64'> min zhes kyang smra B2B3DSF2HHeJLNUZ: ma yin zhes zer F1Q: myin zhes kyang smra A2Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962210bi' class='paragraph'>
+								bar chad ’di dag thams cad kyis<a class='fotnote cn' name='FN6307cn65' href='#N6307cn65'><sup>65</sup></a>
+ || bcu drug char yang nyer mi ’gro<a class='fotnote cn' name='FN6307cn66' href='#N6307cn66'><sup>66</sup></a>
+ ||<br />dam pa’i chos la smad byas<a class='fotnote cn' name='FN6307cn67' href='#N6307cn67'><sup>67</sup></a>
+ nas || dmus<a class='fotnote cn' name='FN6307cn68' href='#N6307cn68'><sup>68</sup></a>
+ long rab tu sdug bsngal ’gyur<a class='fotnote cn' name='FN6307cn69' href='#N6307cn69'><sup>69</sup></a>
+ || h&nbsp;</span></div><div style='' id='9' class='note cn'>65.<a class="internt" name='N6307cn65' href='#FN6307cn65'> kyis A2B2B3DSF1F2GoHHeJLNQU: kyang Z</a>&nbsp; 66.<a class="internt" name='N6307cn66' href='#FN6307cn66'> nyer mi ’gro B2B3DSF1HeJLQUZ: nye bar mi ’gro’o F2: mi ’gro’o HN: nye myi ’gro A2: nyer myi ’gro Go</a>&nbsp; 67.<a class="internt" name='N6307cn67' href='#FN6307cn67'> nyer mi ’gro B2B3DSF1HeJLQUZ: nye bar mi ’gro’o F2: mi ’gro’o HN: nye myi ’gro A2: nyer myi ’gro Go</a>&nbsp; 68.<a class="internt" name='N6307cn68' href='#FN6307cn68'> dmus B2B3DSF1F2GoHHeJNQUZ: rmus L</a>&nbsp; 69.<a class="internt" name='N6307cn69' href='#FN6307cn69'> rab tu sdug bsngal ’gyur A2B2B3DSF2HHeJLNUZ: sdug bsngal gyur pa’o F1Q: rab tu sdug sngal ’gyur Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962211bi' class='paragraph'>
+								rdzogs pa’i sangs rgyas des mi<a class='fotnote cn' name='FN6307cn70' href='#N6307cn70'><sup>70</sup></a>
+ mthong || mthong du zin<a class='fotnote cn' name='FN6307cn71' href='#N6307cn71'><sup>71</sup></a>
+ kyang<a class='fotnote cn' name='FN6307cn72' href='#N6307cn72'><sup>72</sup></a>
+ dad<a class='fotnote cn' name='FN6307cn73' href='#N6307cn73'><sup>73</sup></a>
+ mi<a class='fotnote cn' name='FN6307cn74' href='#N6307cn74'><sup>74</sup></a>
+ ’gyur<a class='fotnote cn' name='FN6307cn75' href='#N6307cn75'><sup>75</sup></a>
+ ||<br />bud med<a class='fotnote cn' name='FN6307cn76' href='#N6307cn76'><sup>76</sup></a>
+ ma ning<a class='fotnote cn' name='FN6307cn77' href='#N6307cn77'><sup>77</sup></a>
+ dmus long dang || khyi dang bong bu rnams su<a class='fotnote cn' name='FN6307cn78' href='#N6307cn78'><sup>78</sup></a>
+ ’gyur || i&nbsp;</span></div><div style='' id='10' class='note cn'>70.<a class="internt" name='N6307cn70' href='#FN6307cn70'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 71.<a class="internt" name='N6307cn71' href='#FN6307cn71'> zin B2B3DSF1F2HHeJLNQUZ: zind A2Go</a>&nbsp; 72.<a class="internt" name='N6307cn72' href='#FN6307cn72'> kyang A2B2B3DSF2GoHHeJLNQUZ: yang F1</a>&nbsp; 73.<a class="internt" name='N6307cn73' href='#FN6307cn73'> dad A2B2DSF1F2GoHHeJLNQU: om. Z</a>&nbsp; 74.<a class="internt" name='N6307cn74' href='#FN6307cn74'> mi B2B2DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 75.<a class="internt" name='N6307cn75' href='#FN6307cn75'> ’gyur A2B2B3DSF1F2GoHHeJLNQU: ’gyur ro Z</a>&nbsp; 76.<a class="internt" name='N6307cn76' href='#FN6307cn76'> bud med B2B3DSF1F2HHeJLNQUZ: bud myed A2Go</a>&nbsp; 77.<a class="internt" name='N6307cn77' href='#FN6307cn77'> ma ning A2B2B3DSF2HHeJLNQU: dang ni F1: ma yin Z: ma ni Go</a>&nbsp; 78.<a class="internt" name='N6307cn78' href='#FN6307cn78'> bong bu rnams su A2B2B3DSF2HHeJQU: bung bu dag tu F1: bung bu rnams su N: bo bu rnams su Z: bong bu rnaṃs su Go: bung bu rnam su L</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962212bi' class='paragraph'>
+								gang zhig sangs rgyas byang chub dang || byang chub sems<a class='fotnote cn' name='FN6307cn79' href='#N6307cn79'><sup>79</sup></a>
+ dpa’ dga’ ba dag<a class='fotnote cn' name='FN6307cn80' href='#N6307cn80'><sup>80</sup></a>
+ ||<br />bar du gcod pa rnam<a class='fotnote cn' name='FN6307cn81' href='#N6307cn81'><sup>81</sup></a>
+ spangs nas || <a class='fotnote cn' name='FN6307cn82' href='#N6307cn82'><sup>82</sup></a>
+bzang po dag gi lam<a class='fotnote cn' name='FN6307cn83' href='#N6307cn83'><sup>83</sup></a>
+ rnams<a class='fotnote cn' name='FN6307cn84' href='#N6307cn84'><sup>84</sup></a>
+ sgom<a class='fotnote cn' name='FN6307cn85' href='#N6307cn85'><sup>85</sup></a>
+ || j&nbsp;</span></div><div style='' id='11' class='note cn'>79.<a class="internt" name='N6307cn79' href='#FN6307cn79'> sems A2B2B3DSF1F2HHeJLNQUZ: seṃs Go</a>&nbsp; 80.<a class="internt" name='N6307cn80' href='#FN6307cn80'> dga’ ba dag A2B2B3DGoHHeJNQUZ: dga’ ba dang SF1L: chos lnga dang ldan na F2</a>&nbsp; 81.<a class="internt" name='N6307cn81' href='#FN6307cn81'> rnam A2DSF1GoJU: rnams B2B3F2HHeLNQZ</a>&nbsp; 82.<a class="internt" name='N6307cn82' href='#FN6307cn82'> the next six lines are missing in F2</a>&nbsp; 83.<a class="internt" name='N6307cn83' href='#FN6307cn83'> lam A2DSHNF1GoJLUZQ: gam B2B3He</a>&nbsp; 84.<a class="internt" name='N6307cn84' href='#FN6307cn84'> rnams A2B2B3DSF1HHeJLNQUZ: rnaṃs Go</a>&nbsp; 85.<a class="internt" name='N6307cn85' href='#FN6307cn85'> sgom A2DGoSHJU: bsgom B2B3HeLN: bsgom (emended later) F1: dang Z</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962213bi' class='paragraph'>
+								pha<a class='fotnote cn' name='FN6307cn86' href='#N6307cn86'><sup>86</sup></a>
+ dang ma ni chos ’di la || yang dang yang du sbyor ba<a class='fotnote cn' name='FN6307cn87' href='#N6307cn87'><sup>87</sup></a>
+ dang ||<br /><a class='fotnote cn' name='FN6307cn88' href='#N6307cn88'><sup>88</sup></a>
+ sems can thams cad rab ’byung<a class='fotnote cn' name='FN6307cn89' href='#N6307cn89'><sup>89</sup></a>
+ bar || myur<a class='fotnote cn' name='FN6307cn90' href='#N6307cn90'><sup>90</sup></a>
+ ba nyid du<a class='fotnote cn' name='FN6307cn91' href='#N6307cn91'><sup>91</sup></a>
+ len<a class='fotnote cn' name='FN6307cn92' href='#N6307cn92'><sup>92</sup></a>
+ du ’jug |<a class='fotnote cn' name='FN6307cn93' href='#N6307cn93'><sup>93</sup></a>
+ k&nbsp;</span></div><div style='' id='12' class='note cn'>86.<a class="internt" name='N6307cn86' href='#FN6307cn86'> pha A2B2B3DGoSHHeLNF1JUZ: pa Q</a>&nbsp; 87.<a class="internt" name='N6307cn87' href='#FN6307cn87'> sbyor ba A2B2B3DSF1GoHHeJLNQU: spyod rab (?) Z</a>&nbsp; 88.<a class="internt" name='N6307cn88' href='#FN6307cn88'> om. A2B2B3DSF1GoHJLNQUZ: gang zhig(deleted) He</a>&nbsp; 89.<a class="internt" name='N6307cn89' href='#FN6307cn89'> ’byung A2DSHNF1GoJLUZQ: byung B2B3He</a>&nbsp; 90.<a class="internt" name='N6307cn90' href='#FN6307cn90'> myur A2B2B3DSF1HHeJLNQUZ: myurd Go</a>&nbsp; 91.<a class="internt" name='N6307cn91' href='#FN6307cn91'> du B2B3DSF1HHeLNQUZ: tu A2GoJ</a>&nbsp; 92.<a class="internt" name='N6307cn92' href='#FN6307cn92'> len B2B3DSF1HHeJLNQUZ: lend A2Go</a>&nbsp; 93.<a class="internt" name='N6307cn93' href='#FN6307cn93'> ’jug || B3A2DF1GoQU</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962214bi' class='paragraph'>
+								shā ri’i bu<a class='fotnote cn' name='FN6307cn94' href='#N6307cn94'><sup>94</sup></a>
+ rab tu byung ba’i byang chub sems dpa’<a class='fotnote cn' name='FN6307cn95' href='#N6307cn95'><sup>95</sup></a>
+ chos lnga dang ldan na<a class='fotnote cn' name='FN6307cn96' href='#N6307cn96'><sup>96</sup></a>
+ sangs rgyas byung<a class='fotnote cn' name='FN6307cn97' href='#N6307cn97'><sup>97</sup></a>
+ ba mnyes par mi<a class='fotnote cn' name='FN6307cn98' href='#N6307cn98'><sup>98</sup></a>
+ byed<a class='fotnote cn' name='FN6307cn99' href='#N6307cn99'><sup>99</sup></a>
+ <a class='fotnote cn' name='FN6307cn100' href='#N6307cn100'><sup>100</sup></a>
+ |<a class='fotnote cn' name='FN6307cn101' href='#N6307cn101'><sup>101</sup></a>
+ dge ba’i bshes gnyen la yang<a class='fotnote cn' name='FN6307cn102' href='#N6307cn102'><sup>102</sup></a>
+ mi sten<a class='fotnote cn' name='FN6307cn103' href='#N6307cn103'><sup>103</sup></a>
+ |<a class='fotnote cn' name='FN6307cn104' href='#N6307cn104'><sup>104</sup></a>
+ dal ba phun sum tshogs pa<a class='fotnote cn' name='FN6307cn105' href='#N6307cn105'><sup>105</sup></a>
+ yang mi ’thob<a class='fotnote cn' name='FN6307cn106' href='#N6307cn106'><sup>106</sup></a>
+ |<a class='fotnote cn' name='FN6307cn107' href='#N6307cn107'><sup>107</sup></a>
+ ji<a class='fotnote cn' name='FN6307cn108' href='#N6307cn108'><sup>108</sup></a>
+ ltar bsgrubs<a class='fotnote cn' name='FN6307cn109' href='#N6307cn109'><sup>109</sup></a>
+ pa’i dge ba’i<a class='fotnote cn' name='FN6307cn110' href='#N6307cn110'><sup>110</sup></a>
+ rtsa ba rnams kyang chud za bar byed<a class='fotnote cn' name='FN6307cn111' href='#N6307cn111'><sup>111</sup></a>
+ ||<a class='fotnote cn' name='FN6307cn112' href='#N6307cn112'><sup>112</sup></a>
+&nbsp;</span></div><div style='' id='13' class='note cn'>94.<a class="internt" name='N6307cn94' href='#FN6307cn94'> bu A2B2B3DSF1F2GoHeJLNQZ: bu | H</a>&nbsp; 95.<a class="internt" name='N6307cn95' href='#FN6307cn95'> dpa’ A2B2DSF2GoHJLNQUZ: dpa’i B3F1He</a>&nbsp; 96.<a class="internt" name='N6307cn96' href='#FN6307cn96'> na DGoJNU: na | A2B3SF2HHeLQZ: na || F1: {pa}na || B2</a>&nbsp; 97.<a class="internt" name='N6307cn97' href='#FN6307cn97'> byung A2DF2JLQSU: ’byung B2B3F1GoHHeNZ</a>&nbsp; 98.<a class="internt" name='N6307cn98' href='#FN6307cn98'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 99.<a class="internt" name='N6307cn99' href='#FN6307cn99'> om. A2B2B3DGoSHHeJLNUZ: pa dang F1Q</a>&nbsp; 100.<a class="internt" name='N6307cn100' href='#FN6307cn100'> sangs rgyas byung ba mnyes par mi byed A2B2B3DSF1HHeJLNQU: om. F2</a>&nbsp; 101.<a class="internt" name='N6307cn101' href='#FN6307cn101'> | A2DSHJNQU: || B2B3F1GoHeLZ</a>&nbsp; 102.<a class="internt" name='N6307cn102' href='#FN6307cn102'> yang B2B3DSF1F2GoHHeJNQUZ: ’ang A2L</a>&nbsp; 103.<a class="internt" name='N6307cn103' href='#FN6307cn103'> la yang mi sten DJU: la’ang mi sten SZ: la mi brten pa dang F1: la ’ang mi ste F2: la mi brtan H: la mi rtan N: la mi sten pa dang Q: la ’ang myi stend A2: la yang mi rten B2B3He: la yang myi stend Go: la’ang mi rten L</a>&nbsp; 104.<a class="internt" name='N6307cn104' href='#FN6307cn104'> 11 | A2DSF2HHeJQU: || B2B3F1GoLNZ</a>&nbsp; 105.<a class="internt" name='N6307cn105' href='#FN6307cn105'> dal ba phun sum tshogs pa A2B2B3DGoSHHeJLNUZ: dal ba ’byor ba F1Q: dam ’byor phun sum tshogs pa F2</a>&nbsp; 106.<a class="internt" name='N6307cn106' href='#FN6307cn106'> yang mi ’thob DHJNU: ’ang mi ’thob SL: mi thob pa dang F1Q: ’ang mi thob F2: la’ang mi thob Z: ’ang myi thob A2Go: ’ang mi B2B3He</a>&nbsp; 107.<a class="internt" name='N6307cn107' href='#FN6307cn107'> | A2DSF2HJQ: || F1GoNLZ: om. B2B3He</a>&nbsp; 108.<a class="internt" name='N6307cn108' href='#FN6307cn108'> ji A2B2B3DSF1F2HHeJLNQU: ci GoZ</a>&nbsp; 109.<a class="internt" name='N6307cn109' href='#FN6307cn109'> bsgrubs A2B2B3DSF1F2HHeJNQUZ: sgrubs GoL</a>&nbsp; 110.<a class="internt" name='N6307cn110' href='#FN6307cn110'> dge ba’i A2B2B3DSF1F2HHeJLNQUZ: dge ba’i {sa dge ’’i(deleted?)} Go</a>&nbsp; 111.<a class="internt" name='N6307cn111' href='#FN6307cn111'> rnams kyang chud za bar byed A2B2B3DSHHeJLNUZ: rnams kyang chud mi za bar byed F2: rnam chud gson pa dang F1: rnams chud stson pa dang Q: rnams kyang chud ze bar byed Go</a>&nbsp; 112.<a class="internt" name='N6307cn112' href='#FN6307cn112'> || B2B3DGoLSF1N: | F2HHeJQUZ: om. A2</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962215bi' class='paragraph'>
+								sdom pa la gnas pa’i byang chub sems dpa’ sems dpa’ chen po’i<a class='fotnote cn' name='FN6307cn113' href='#N6307cn113'><sup>113</sup></a>
+ yang<a class='fotnote cn' name='FN6307cn114' href='#N6307cn114'><sup>114</sup></a>
+ rjes su<a class='fotnote cn' name='FN6307cn115' href='#N6307cn115'><sup>115</sup></a>
+ <a class='fotnote cn' name='FN6307cn116' href='#N6307cn116'><sup>116</sup></a>
+ slob par mi<a class='fotnote cn' name='FN6307cn117' href='#N6307cn117'><sup>117</sup></a>
+ ’gyur<a class='fotnote cn' name='FN6307cn118' href='#N6307cn118'><sup>118</sup></a>
+ te | bla na med<a class='fotnote cn' name='FN6307cn119' href='#N6307cn119'><sup>119</sup></a>
+ pa yang dag par rdzogs pa’i byang chub kyang myur du<a class='fotnote cn' name='FN6307cn120' href='#N6307cn120'><sup>120</sup></a>
+ <a class='fotnote cn' name='FN6307cn121' href='#N6307cn121'><sup>121</sup></a>
+ mngon par rdzogs par<a class='fotnote cn' name='FN6307cn122' href='#N6307cn122'><sup>122</sup></a>
+ ’tshang mi<a class='fotnote cn' name='FN6307cn123' href='#N6307cn123'><sup>123</sup></a>
+ rgya’o ||&nbsp;</span></div><div style='' id='14' class='note cn'>113.<a class="internt" name='N6307cn113' href='#FN6307cn113'> po’i A2B2B3DGoSF2HHeJLNQU: po’i || F1: po Z</a>&nbsp; 114.<a class="internt" name='N6307cn114' href='#FN6307cn114'> yang A2DSF2GoHJLNUZ: om. B2B3F1HeQ</a>&nbsp; 115.<a class="internt" name='N6307cn115' href='#FN6307cn115'> rjes su B2B3DSF1F2GoHHeJNQUZ: rjesu L</a>&nbsp; 116.<a class="internt" name='N6307cn116' href='#FN6307cn116'> om. A2DSHNF1F2GoJUZQ: yang B2B3He</a>&nbsp; 117.<a class="internt" name='N6307cn117' href='#FN6307cn117'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 118.<a class="internt" name='N6307cn118' href='#FN6307cn118'> ’gyur A2B2B3DSF1F2HHeJLNQUZ: ’gyurd Go</a>&nbsp; 119.<a class="internt" name='N6307cn119' href='#FN6307cn119'> med B2B3DSF1F2HHeJLNQUZ: myed A2Go</a>&nbsp; 120.<a class="internt" name='N6307cn120' href='#FN6307cn120'> myur du A2B2B3DSF1F2HHeJLNQUZ: myurd tu Go</a>&nbsp; 121.<a class="internt" name='N6307cn121' href='#FN6307cn121'> om. A2DSHNF1F2GoJLUZQ: mthong bar B2B3He</a>&nbsp; 122.<a class="internt" name='N6307cn122' href='#FN6307cn122'> par A2B2B3DSF2GoHHeJLNQUZ: om. F1</a>&nbsp; 123.<a class="internt" name='N6307cn123' href='#FN6307cn123'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962216bi' class='paragraph'>
+								lnga gang zhe na |<a class='fotnote cn' name='FN6307cn124' href='#N6307cn124'><sup>124</sup></a>
+ ’chal ba’i tshul khrims la spyod pa dang<a class='fotnote cn' name='FN6307cn125' href='#N6307cn125'><sup>125</sup></a>
+ | dam pa’i chos la smod pa dang<a class='fotnote cn' name='FN6307cn126' href='#N6307cn126'><sup>126</sup></a>
+ | rnyed pa<a class='fotnote cn' name='FN6307cn127' href='#N6307cn127'><sup>127</sup></a>
+ dang |<a class='fotnote cn' name='FN6307cn128' href='#N6307cn128'><sup>128</sup></a>
+ bkur sti<a class='fotnote cn' name='FN6307cn129' href='#N6307cn129'><sup>129</sup></a>
+ dang |<a class='fotnote cn' name='FN6307cn130' href='#N6307cn130'><sup>130</sup></a>
+ tshigs su<a class='fotnote cn' name='FN6307cn131' href='#N6307cn131'><sup>131</sup></a>
+ bcad pa la chags pa dang |<a class='fotnote cn' name='FN6307cn132' href='#N6307cn132'><sup>132</sup></a>
+ bdag tu lta ba’i thibs po<a class='fotnote cn' name='FN6307cn133' href='#N6307cn133'><sup>133</sup></a>
+ dang | gzhan gyi khyim la phrag<a class='fotnote cn' name='FN6307cn134' href='#N6307cn134'><sup>134</sup></a>
+ dog dang<a class='fotnote cn' name='FN6307cn135' href='#N6307cn135'><sup>135</sup></a>
+ ser sna skyed pa ste<a class='fotnote cn' name='FN6307cn136' href='#N6307cn136'><sup>136</sup></a>
+ |&nbsp;</span></div><div style='' id='15' class='note cn'>124.<a class="internt" name='N6307cn124' href='#FN6307cn124'> | A2B2B3DSF1F2GoHHeJLNQU: || Z</a>&nbsp; 125.<a class="internt" name='N6307cn125' href='#FN6307cn125'> ’chal ba’i tshul khrims la spyod pa dang DHJNU: ’chal ba’i tshul khrims spyod pa dang B2B3HeLSF2Z: tshul khrims ngan pa spyod pa dang F1Q: ’chald ba’i tshul khrims spyod pa dang A2Go</a>&nbsp; 126.<a class="internt" name='N6307cn126' href='#FN6307cn126'> dam pa’i chos la smod pa dang (added in margin) F1</a>&nbsp; 127.<a class="internt" name='N6307cn127' href='#FN6307cn127'> rnyed pa A2B2B3DSF2GoHHeJLNQUZ: thob pa F1: dam pa’i chos la ni mi spyod pa dang N</a>&nbsp; 128.<a class="internt" name='N6307cn128' href='#FN6307cn128'> dang | DSF2GoJQU: dang B2B3F1HHeLNZ</a>&nbsp; 129.<a class="internt" name='N6307cn129' href='#FN6307cn129'> bkur sti A2B2B3DSF2GoHHeJLUZ: bkur bsti F1NQ</a>&nbsp; 130.<a class="internt" name='N6307cn130' href='#FN6307cn130'> dang | A2B3DSF1GoHeJLQUZ: dang F2HNZ</a>&nbsp; 131.<a class="internt" name='N6307cn131' href='#FN6307cn131'> tshigs su B2B3DSF1F2GoHHeJNQUZ: tshigsu L</a>&nbsp; 132.<a class="internt" name='N6307cn132' href='#FN6307cn132'> | B2B3DSF1F2GoHHeJNQUZ: om. L</a>&nbsp; 133.<a class="internt" name='N6307cn133' href='#FN6307cn133'> lta ba’i thibs po A2B2B3DGoSHHeJLNUZ: lta ba la sdug pa F1: lta ba’i thims po F2: lta ba stug po Q</a>&nbsp; 134.<a class="internt" name='N6307cn134' href='#FN6307cn134'> phrag A2B2B3DSF1F2HHeJNUQ: phra ZL: phrag dog dang (added below) Go</a>&nbsp; 135.<a class="internt" name='N6307cn135' href='#FN6307cn135'> dang DSF1F2JLU: dang | A2B2B3HHeNQ</a>&nbsp; 136.<a class="internt" name='N6307cn136' href='#FN6307cn136'> ser sna skyed pa ste A2B3DSJLNQUZ: ser sna bskyed pa dang (added below) F1: ser sna skyed pa te F2: ser sna bskyed pa ste B2GoHHe</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962217bi' class='paragraph'>
+								shā<a class='fotnote cn' name='FN6307cn137' href='#N6307cn137'><sup>137</sup></a>
+ ri’i bu rab tu byung ba’i byang chub sems<a class='fotnote cn' name='FN6307cn138' href='#N6307cn138'><sup>138</sup></a>
+ dpa’<a class='fotnote cn' name='FN6307cn139' href='#N6307cn139'><sup>139</sup></a>
+ chos lnga po de dag dang ldan na<a class='fotnote cn' name='FN6307cn140' href='#N6307cn140'><sup>140</sup></a>
+ sangs rgyas byung ba la<a class='fotnote cn' name='FN6307cn141' href='#N6307cn141'><sup>141</sup></a>
+ mnyes<a class='fotnote cn' name='FN6307cn142' href='#N6307cn142'><sup>142</sup></a>
+ par mi<a class='fotnote cn' name='FN6307cn143' href='#N6307cn143'><sup>143</sup></a>
+ byed pa dang | dge ba’i bshes gnyen la mi<a class='fotnote cn' name='FN6307cn144' href='#N6307cn144'><sup>144</sup></a>
+ sten<a class='fotnote cn' name='FN6307cn145' href='#N6307cn145'><sup>145</sup></a>
+ pa dang | gong ma bzhin du<a class='fotnote cn' name='FN6307cn146' href='#N6307cn146'><sup>146</sup></a>
+ bla na med<a class='fotnote cn' name='FN6307cn147' href='#N6307cn147'><sup>147</sup></a>
+ pa<a class='fotnote cn' name='FN6307cn148' href='#N6307cn148'><sup>148</sup></a>
+ yang dag par rdzogs pa’i byang chub kyi bar du yang<a class='fotnote cn' name='FN6307cn149' href='#N6307cn149'><sup>149</sup></a>
+ myur du<a class='fotnote cn' name='FN6307cn150' href='#N6307cn150'><sup>150</sup></a>
+ mngon par<a class='fotnote cn' name='FN6307cn151' href='#N6307cn151'><sup>151</sup></a>
+ rdzogs par ’tshang mi<a class='fotnote cn' name='FN6307cn152' href='#N6307cn152'><sup>152</sup></a>
+ rgya’o ||&nbsp;</span></div><div style='' id='16' class='note cn'>137.<a class="internt" name='N6307cn137' href='#FN6307cn137'> shā B2B3DSF1HHeJNQU: sha A2F2GoLZ</a>&nbsp; 138.<a class="internt" name='N6307cn138' href='#FN6307cn138'> rab tu byung ba’i byang chub sems A2B2B3DSF2GoHHeJLNQUZ: rab tu byang sems F1</a>&nbsp; 139.<a class="internt" name='N6307cn139' href='#FN6307cn139'> dpa’ A2B2B3DGoHHeJLNQUZ: dpa’i S: dpa’{i} F2</a>&nbsp; 140.<a class="internt" name='N6307cn140' href='#FN6307cn140'> de dag dang ldan na B2DGoJNU: de dag dang ldan na | A2B3SF2HHeQ: de dang ldan pa na F1: de dang ldan na Z: de dag dang ldan na || L</a>&nbsp; 141.<a class="internt" name='N6307cn141' href='#FN6307cn141'> la DJQU: om. A2B2B3SF1F2GoHHeLNZ</a>&nbsp; 142.<a class="internt" name='N6307cn142' href='#FN6307cn142'> mnyes A2B3DSHNF1F2GoHeJLUZQ: nyes B2</a>&nbsp; 143.<a class="internt" name='N6307cn143' href='#FN6307cn143'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 144.<a class="internt" name='N6307cn144' href='#FN6307cn144'> mi B2B3DSF2HHeJLNQUZ: ma F1: myi A2Go</a>&nbsp; 145.<a class="internt" name='N6307cn145' href='#FN6307cn145'> sten DSF1F2JQUZ: brten HN: stend A2Go: rten B2B3He: bsten L</a>&nbsp; 146.<a class="internt" name='N6307cn146' href='#FN6307cn146'> gong ma bzhin du B2B3DSF2GoHHeJLNUZ: gong ma bzhin tu A2: de bzhin du sbyar te | F1Q</a>&nbsp; 147.<a class="internt" name='N6307cn147' href='#FN6307cn147'> med B2B3DSF1F2HHeJLNQUZ: myed A2Go</a>&nbsp; 148.<a class="internt" name='N6307cn148' href='#FN6307cn148'> pa A2B2B3DSF1F2HHeJLNQUZ: pa’i Go</a>&nbsp; 149.<a class="internt" name='N6307cn149' href='#FN6307cn149'> yang DF1HJNU: ’ang A2B2B3SF2GoHeLQZ</a>&nbsp; 150.<a class="internt" name='N6307cn150' href='#FN6307cn150'> myur du A2B2B3DSF1F2HJLNQUZ: myurd tu Go: myur ‹du(added below)› He</a>&nbsp; 151.<a class="internt" name='N6307cn151' href='#FN6307cn151'> mngon par A2B2B3DSF1GoHHeJLNQUZ: om. F2</a>&nbsp; 152.<a class="internt" name='N6307cn152' href='#FN6307cn152'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962218bi' class='paragraph'>
+								shā<a class='fotnote cn' name='FN6307cn153' href='#N6307cn153'><sup>153</sup></a>
+ ri’i bu<a class='fotnote cn' name='FN6307cn154' href='#N6307cn154'><sup>154</sup></a>
+ ’di lta ste<a class='fotnote cn' name='FN6307cn155' href='#N6307cn155'><sup>155</sup></a>
+ khyi ltogs pa<a class='fotnote cn' name='FN6307cn156' href='#N6307cn156'><sup>156</sup></a>
+ keng rus sha med<a class='fotnote cn' name='FN6307cn157' href='#N6307cn157'><sup>157</sup></a>
+ pa |<a class='fotnote cn' name='FN6307cn158' href='#N6307cn158'><sup>158</sup></a>
+ khrag gis ’bags<a class='fotnote cn' name='FN6307cn159' href='#N6307cn159'><sup>159</sup></a>
+ pa blangs nas<a class='fotnote cn' name='FN6307cn160' href='#N6307cn160'><sup>160</sup></a>
+ de srang<a class='fotnote cn' name='FN6307cn161' href='#N6307cn161'><sup>161</sup></a>
+ gi sgo<a class='fotnote cn' name='FN6307cn162' href='#N6307cn162'><sup>162</sup></a>
+ na<a class='fotnote cn' name='FN6307cn163' href='#N6307cn163'><sup>163</sup></a>
+ gnas te |<a class='fotnote cn' name='FN6307cn164' href='#N6307cn164'><sup>164</sup></a>
+ kha<a class='fotnote cn' name='FN6307cn165' href='#N6307cn165'><sup>165</sup></a>
+ chus gos pa de<a class='fotnote cn' name='FN6307cn166' href='#N6307cn166'><sup>166</sup></a>
+ ’cha’<a class='fotnote cn' name='FN6307cn167' href='#N6307cn167'><sup>167</sup></a>
+ ba las<a class='fotnote cn' name='FN6307cn168' href='#N6307cn168'><sup>168</sup></a>
+ de nas rgyal rigs shing sā<a class='fotnote cn' name='FN6307cn169' href='#N6307cn169'><sup>169</sup></a>
+ la chen po lta bu dang<a class='fotnote cn' name='FN6307cn170' href='#N6307cn170'><sup>170</sup></a>
+ | bram ze<a class='fotnote cn' name='FN6307cn171' href='#N6307cn171'><sup>171</sup></a>
+ shing sā la chen po lta bu dang<a class='fotnote cn' name='FN6307cn172' href='#N6307cn172'><sup>172</sup></a>
+ | khyim bdag<a class='fotnote cn' name='FN6307cn173' href='#N6307cn173'><sup>173</sup></a>
+ shing sā<a class='fotnote cn' name='FN6307cn174' href='#N6307cn174'><sup>174</sup></a>
+ la chen po lta bu<a class='fotnote cn' name='FN6307cn175' href='#N6307cn175'><sup>175</sup></a>
+ khyi ltogs pa de<a class='fotnote cn' name='FN6307cn176' href='#N6307cn176'><sup>176</sup></a>
+ logs su ’ong ba<a class='fotnote cn' name='FN6307cn177' href='#N6307cn177'><sup>177</sup></a>
+ khyi des<a class='fotnote cn' name='FN6307cn178' href='#N6307cn178'><sup>178</sup></a>
+ rgyang ma nas ’ong ba mthong nas<a class='fotnote cn' name='FN6307cn179' href='#N6307cn179'><sup>179</sup></a>
+ de<a class='fotnote cn' name='FN6307cn180' href='#N6307cn180'><sup>180</sup></a>
+ ’di snyams su<a class='fotnote cn' name='FN6307cn181' href='#N6307cn181'><sup>181</sup></a>
+ sems te |<a class='fotnote cn' name='FN6307cn182' href='#N6307cn182'><sup>182</sup></a>
+&nbsp;</span></div><div style='' id='17' class='note cn'>153.<a class="internt" name='N6307cn153' href='#FN6307cn153'> shā B2B3DSF1HHeJNQU: sha A2F2GoLZ</a>&nbsp; 154.<a class="internt" name='N6307cn154' href='#FN6307cn154'> bu A2B2B3DSF1F2GoHeJLNQUZ: bu | H</a>&nbsp; 155.<a class="internt" name='N6307cn155' href='#FN6307cn155'> ste DJLNU: ste | A2B2B3SF1GoHHeQZ</a>&nbsp; 156.<a class="internt" name='N6307cn156' href='#FN6307cn156'> ltogs pa A2B2B3DSF2GoHeLNUZ: bkres pa F1Q: ltogs pa | H: ltogs J</a>&nbsp; 157.<a class="internt" name='N6307cn157' href='#FN6307cn157'> med B2B3DSF1F2HHeJLNQUZ: myed A2Go</a>&nbsp; 158.<a class="internt" name='N6307cn158' href='#FN6307cn158'> pa | DJU: pa A2SF1F2GoLHNQZ: om. B2B3He</a>&nbsp; 159.<a class="internt" name='N6307cn159' href='#FN6307cn159'> gis ’bags A2B2B3DSF1F2HHeJNQU: ’phags Z: gis ’pags Go: ’babs L</a>&nbsp; 160.<a class="internt" name='N6307cn160' href='#FN6307cn160'> nas B2B3DF2HHeJNU: nas | A2SF1GoQZ: na L</a>&nbsp; 161.<a class="internt" name='N6307cn161' href='#FN6307cn161'> srang A2B2B3DSF1GoHHeJLNQUZ: rang F2</a>&nbsp; 162.<a class="internt" name='N6307cn162' href='#FN6307cn162'> sgo A2B2B3DSF1F2GoHHeJLNQU: sgos Z</a>&nbsp; 163.<a class="internt" name='N6307cn163' href='#FN6307cn163'> na A2B3DSHHeNF1F2JLUZQ: na{s(deleted?)} B2: nas Go</a>&nbsp; 164.<a class="internt" name='N6307cn164' href='#FN6307cn164'> te | A2B2B3DSF1F2GoHeJLQUZ: te HN</a>&nbsp; 165.<a class="internt" name='N6307cn165' href='#FN6307cn165'> kha A2B2B3DSF2GoHHeJLNQUZ: om. F1</a>&nbsp; 166.<a class="internt" name='N6307cn166' href='#FN6307cn166'> chus gos pa de A2DSF2GoHJLNUZ: chu zag cing F1Q: chus gos ba B2: chus gos pa B3He</a>&nbsp; 167.<a class="internt" name='N6307cn167' href='#FN6307cn167'> ’cha’ DSF1HJNUZ: ’chal F2: ’cha A2GoQ: ’che B2B3He: ’chang L</a>&nbsp; 168.<a class="internt" name='N6307cn168' href='#FN6307cn168'> ba las B2B3DF1JLQU: ba las | A2SF2GoHHe: ba || N: bsal Z</a>&nbsp; 169.<a class="internt" name='N6307cn169' href='#FN6307cn169'> sā B2B3DSHHeJNU: sa A2F2GoLZ</a>&nbsp; 170.<a class="internt" name='N6307cn170' href='#FN6307cn170'> shing sā la chen po lta bu dang B2B3DSHHeJNU: che zhing mtho ba ’am F1Q: shing sa la chen por lta bu dang</a>&nbsp; 171.<a class="internt" name='N6307cn171' href='#FN6307cn171'> ze DSF1F2JLU: ze’i rigs A2B3GoHHeNZ: ze che Q: zer rigs B2v</a>&nbsp; 172.<a class="internt" name='N6307cn172' href='#FN6307cn172'> shing sā la chen po lta bu dang B2B3DSHHeJLNU: ’i rigs che zhing mtho ba ’am F1: shing sa la chen po lta bu dang A2F2GoZ: zhing mtho pa ’am Q</a>&nbsp; 173.<a class="internt" name='N6307cn173' href='#FN6307cn173'> bdag B2B3DSF1F2HeJL: bdag gi rigs A2HNZ: bdag che Q: bdag gi ris Go</a>&nbsp; 174.<a class="internt" name='N6307cn174' href='#FN6307cn174'> sā B2B3DSHHeJNU: sa A2F2GoLZ</a>&nbsp; 175.<a class="internt" name='N6307cn175' href='#FN6307cn175'> shing sā la chen po lta bu B2B3DSHHeJNU: gi rigs che zhing mtho ba dag | F1: shing mtho pa dag Q</a>&nbsp; 176.<a class="internt" name='N6307cn176' href='#FN6307cn176'> khyi ltogs pa de A2B2B3DGoHJLNU: de S: khyi bkres pa de F1Q: khyim ltogs pa de F2: khyi ltogs pa des Z: khyi ltogs de’i He</a>&nbsp; 177.<a class="internt" name='N6307cn177' href='#FN6307cn177'> logs su ’ong ba A2B2DGoSHJNUZ: logs su ’ong ba | B3F1LQ: logs ’ong ba | F2: log su ong ba He</a>&nbsp; 178.<a class="internt" name='N6307cn178' href='#FN6307cn178'> khyi des A2B2B3DF1F2GoHHeJLNQU: khyi ltogs pa des S: des Z</a>&nbsp; 179.<a class="internt" name='N6307cn179' href='#FN6307cn179'> nas DHJNQU: nas | A2B2B3SF1F2GoHeLZ</a>&nbsp; 180.<a class="internt" name='N6307cn180' href='#FN6307cn180'> de A2B2B3DF1F2GoHJLNQUSZ: om. He</a>&nbsp; 181.<a class="internt" name='N6307cn181' href='#FN6307cn181'> snyams su DNU: snyam du B2B3SF1HHeJLZ: snyams du F2Q: snyam tu A2Go</a>&nbsp; 182.<a class="internt" name='N6307cn182' href='#FN6307cn182'> om. A2DSHNF1F2GoHeJLUZQ: de B2B3He</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962219bi' class='paragraph'>
+								’di ni<a class='fotnote cn' name='FN6307cn183' href='#N6307cn183'><sup>183</sup></a>
+ bdag gi<a class='fotnote cn' name='FN6307cn184' href='#N6307cn184'><sup>184</sup></a>
+ kha zas ro<a class='fotnote cn' name='FN6307cn185' href='#N6307cn185'><sup>185</sup></a>
+ zhim<a class='fotnote cn' name='FN6307cn186' href='#N6307cn186'><sup>186</sup></a>
+ po ’di<a class='fotnote cn' name='FN6307cn187' href='#N6307cn187'><sup>187</sup></a>
+ ’phrog pa zhig go<a class='fotnote cn' name='FN6307cn188' href='#N6307cn188'><sup>188</sup></a>
+ snyam nas<a class='fotnote cn' name='FN6307cn189' href='#N6307cn189'><sup>189</sup></a>
+ de bzhin<a class='fotnote cn' name='FN6307cn190' href='#N6307cn190'><sup>190</sup></a>
+ tu zugs<a class='fotnote cn' name='FN6307cn191' href='#N6307cn191'><sup>191</sup></a>
+ shing mig<a class='fotnote cn' name='FN6307cn192' href='#N6307cn192'><sup>192</sup></a>
+ tshugs su<a class='fotnote cn' name='FN6307cn193' href='#N6307cn193'><sup>193</sup></a>
+ lta<a class='fotnote cn' name='FN6307cn194' href='#N6307cn194'><sup>194</sup></a>
+ la |<a class='fotnote cn' name='FN6307cn195' href='#N6307cn195'><sup>195</sup></a>
+ drang<a class='fotnote cn' name='FN6307cn196' href='#N6307cn196'><sup>196</sup></a>
+ bsnyer<a class='fotnote cn' name='FN6307cn197' href='#N6307cn197'><sup>197</sup></a>
+ te |<a class='fotnote cn' name='FN6307cn198' href='#N6307cn198'><sup>198</sup></a>
+ skad<a class='fotnote cn' name='FN6307cn199' href='#N6307cn199'><sup>199</sup></a>
+ cher zugs<a class='fotnote cn' name='FN6307cn200' href='#N6307cn200'><sup>200</sup></a>
+ na<a class='fotnote cn' name='FN6307cn201' href='#N6307cn201'><sup>201</sup></a>
+ <a class='fotnote cn' name='FN6307cn202' href='#N6307cn202'><sup>202</sup></a>
+ |&nbsp;</span></div><div style='' id='18' class='note cn'>183.<a class="internt" name='N6307cn183' href='#FN6307cn183'> ni A2B2B3DSF1F2GoHeJLNQUZ: ni | H</a>&nbsp; 184.<a class="internt" name='N6307cn184' href='#FN6307cn184'> gi A2B2B3DSF1GoHHeJLNQUZ: om. F2</a>&nbsp; 185.<a class="internt" name='N6307cn185' href='#FN6307cn185'> ro A2B2B3DSF2GoHHeJLNUZ: om. F1Q</a>&nbsp; 186.<a class="internt" name='N6307cn186' href='#FN6307cn186'> zhim A2B2B3DSF1GoHHeJLNQUZ: zhing F2</a>&nbsp; 187.<a class="internt" name='N6307cn187' href='#FN6307cn187'> ’di A2DSHNF1F2JLUZQ: om. B2B3GoHe</a>&nbsp; 188.<a class="internt" name='N6307cn188' href='#FN6307cn188'> go A2B2B3DSF1F2GoHeJLNQUZ: go | H</a>&nbsp; 189.<a class="internt" name='N6307cn189' href='#FN6307cn189'> nas A2DHJU: nas | B2B3SF1GoHeLNQZ</a>&nbsp; 190.<a class="internt" name='N6307cn190' href='#FN6307cn190'> bzhin A2B2DSF1F2HNQUZ: shin JB3GoHeL</a>&nbsp; 191.<a class="internt" name='N6307cn191' href='#FN6307cn191'> zugs A2B2B3DSF1GoHHeJLNQU: gzugs F2Z</a>&nbsp; 192.<a class="internt" name='N6307cn192' href='#FN6307cn192'> mig B2B3DSF1F2HHeJNQUZ: myig A2Go: mi L</a>&nbsp; 193.<a class="internt" name='N6307cn193' href='#FN6307cn193'> tshugs su A2B2B3DSF1F2GoHHeJNQUZ: gtshugs L</a>&nbsp; 194.<a class="internt" name='N6307cn194' href='#FN6307cn194'> lta A2B2B3DHeJLSQUZ: lto F2: blta HNF1Go</a>&nbsp; 195.<a class="internt" name='N6307cn195' href='#FN6307cn195'> la | DJSU: la A2B2B3F2HHeLZ: pa GoN</a>&nbsp; 196.<a class="internt" name='N6307cn196' href='#FN6307cn196'> drang A2B2B3DGoHeJLSUZ: dang F2: brang HN</a>&nbsp; 197.<a class="internt" name='N6307cn197' href='#FN6307cn197'> bsnyer B2B3DJSHHeLNU: snyed F2: brnyer Z: bsnyerd A2Go</a>&nbsp; 198.<a class="internt" name='N6307cn198' href='#FN6307cn198'> te | A2DGoJLU: te B2B3SF2HHeN</a>&nbsp; 199.<a class="internt" name='N6307cn199' href='#FN6307cn199'> skad A2B2B3DGoSHHeJLNUZ: skang F2</a>&nbsp; 200.<a class="internt" name='N6307cn200' href='#FN6307cn200'> zugs A2DSHNF1F2GoHeJLUZQ: {g}zugs B2: gzugs B3</a>&nbsp; 201.<a class="internt" name='N6307cn201' href='#FN6307cn201'> na B2DSF2JHU: pa N: na | A2B3F2GoLHe</a>&nbsp; 202.<a class="internt" name='N6307cn202' href='#FN6307cn202'> mig tshugs su lta la | drang bsnyer te | skad cher zugs na D: shing drag tu blta la mche ba ston cing za bar byed na F1Q</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962220bi' class='paragraph'>
+								shā<a class='fotnote cn' name='FN6307cn203' href='#N6307cn203'><sup>203</sup></a>
+ ri’i bu<a class='fotnote cn' name='FN6307cn204' href='#N6307cn204'><sup>204</sup></a>
+ de ji<a class='fotnote cn' name='FN6307cn205' href='#N6307cn205'><sup>205</sup></a>
+ snyam du sems | skyes bu de<a class='fotnote cn' name='FN6307cn206' href='#N6307cn206'><sup>206</sup></a>
+ keng rus sha med<a class='fotnote cn' name='FN6307cn207' href='#N6307cn207'><sup>207</sup></a>
+ pa<a class='fotnote cn' name='FN6307cn208' href='#N6307cn208'><sup>208</sup></a>
+ khrag gis ’bags pa<a class='fotnote cn' name='FN6307cn209' href='#N6307cn209'><sup>209</sup></a>
+ de<a class='fotnote cn' name='FN6307cn210' href='#N6307cn210'><sup>210</sup></a>
+ ’dod<a class='fotnote cn' name='FN6307cn211' href='#N6307cn211'><sup>211</sup></a>
+ pa yin nam |<a class='fotnote cn' name='FN6307cn212' href='#N6307cn212'><sup>212</sup></a>
+ gsol<a class='fotnote cn' name='FN6307cn213' href='#N6307cn213'><sup>213</sup></a>
+ pa | bcom ldan ’das<a class='fotnote cn' name='FN6307cn214' href='#N6307cn214'><sup>214</sup></a>
+ de<a class='fotnote cn' name='FN6307cn215' href='#N6307cn215'><sup>215</sup></a>
+ ma lags so<a class='fotnote cn' name='FN6307cn216' href='#N6307cn216'><sup>216</sup></a>
+ ||&nbsp;</span></div><div style='' id='19' class='note cn'>203.<a class="internt" name='N6307cn203' href='#FN6307cn203'> shā B2B3DSF1HHeJNQU: sha A2F2GoLZ</a>&nbsp; 204.<a class="internt" name='N6307cn204' href='#FN6307cn204'> bu A2B2B3DSF1F2GoHeJLNQUZ: bu | H</a>&nbsp; 205.<a class="internt" name='N6307cn205' href='#FN6307cn205'> ji B2B3DSF1F2HeJLNQUH: ci A2GoZ</a>&nbsp; 206.<a class="internt" name='N6307cn206' href='#FN6307cn206'> de A2DSHNF1F2GoJLUZQ: om. B2B3He</a>&nbsp; 207.<a class="internt" name='N6307cn207' href='#FN6307cn207'> med B2B3DSF1F2HHeJLNQUZ: myed A2Go</a>&nbsp; 208.<a class="internt" name='N6307cn208' href='#FN6307cn208'> pa A2B2B3DSF1F2GoHeJLNQUH: pa | Z</a>&nbsp; 209.<a class="internt" name='N6307cn209' href='#FN6307cn209'> ’bags pa A2B2B3DSF1F2HeJNQUH: ’bags Z: ’babs</a>&nbsp; 210.<a class="internt" name='N6307cn210' href='#FN6307cn210'> de A2B2B3DSF1F2HHeJLQUZ: om. N: khrag gis ’bags pa de (added below) Go</a>&nbsp; 211.<a class="internt" name='N6307cn211' href='#FN6307cn211'> ’dod A2B2B3DSF1F2GoHHeJLQUZ: ’drad Z</a>&nbsp; 212.<a class="internt" name='N6307cn212' href='#FN6307cn212'> | B2B3DSF1F2GoHHeJLQUZ: || A2Z</a>&nbsp; 213.<a class="internt" name='N6307cn213' href='#FN6307cn213'> gsol B2B3DSF1F2HHeJLNQUZ: gsold A2Go</a>&nbsp; 214.<a class="internt" name='N6307cn214' href='#FN6307cn214'> ’das A2B2B3DSF1F2GoHeJLNQUZ: ’das | H</a>&nbsp; 215.<a class="internt" name='N6307cn215' href='#FN6307cn215'> de A2DSF1F2GoJLQU: de ni | HZ: om. B2B3He</a>&nbsp; 216.<a class="internt" name='N6307cn216' href='#FN6307cn216'> lags so A2B2B3DSF1F2GoHHeJNQUZ: lagso L</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962221bi' class='paragraph'>
+								bde bar gshegs pa<a class='fotnote cn' name='FN6307cn217' href='#N6307cn217'><sup>217</sup></a>
+ de<a class='fotnote cn' name='FN6307cn218' href='#N6307cn218'><sup>218</sup></a>
+ ma lags so<a class='fotnote cn' name='FN6307cn219' href='#N6307cn219'><sup>219</sup></a>
+ || bcom ldan ’das kyis bka’ stsal<a class='fotnote cn' name='FN6307cn220' href='#N6307cn220'><sup>220</sup></a>
+ pa | khyi de ci’i phyir shin tu<a class='fotnote cn' name='FN6307cn221' href='#N6307cn221'><sup>221</sup></a>
+ zugs shing<a class='fotnote cn' name='FN6307cn222' href='#N6307cn222'><sup>222</sup></a>
+ mig<a class='fotnote cn' name='FN6307cn223' href='#N6307cn223'><sup>223</sup></a>
+ tshugs su<a class='fotnote cn' name='FN6307cn224' href='#N6307cn224'><sup>224</sup></a>
+ lta<a class='fotnote cn' name='FN6307cn225' href='#N6307cn225'><sup>225</sup></a>
+ la<a class='fotnote cn' name='FN6307cn226' href='#N6307cn226'><sup>226</sup></a>
+ drang<a class='fotnote cn' name='FN6307cn227' href='#N6307cn227'><sup>227</sup></a>
+ bsnyer<a class='fotnote cn' name='FN6307cn228' href='#N6307cn228'><sup>228</sup></a>
+ te |<a class='fotnote cn' name='FN6307cn229' href='#N6307cn229'><sup>229</sup></a>
+ skad cher zugs<a class='fotnote cn' name='FN6307cn230' href='#N6307cn230'><sup>230</sup></a>
+ | <a class='fotnote cn' name='FN6307cn231' href='#N6307cn231'><sup>231</sup></a>
+&nbsp;</span></div><div style='' id='20' class='note cn'>217.<a class="internt" name='N6307cn217' href='#FN6307cn217'> pa A2B2B3DSF1F2GoHeJLNQUZ: pa | H</a>&nbsp; 218.<a class="internt" name='N6307cn218' href='#FN6307cn218'> de A2DF1F2GoJLQUZ: om. B2B3SHe: de ni | HN</a>&nbsp; 219.<a class="internt" name='N6307cn219' href='#FN6307cn219'> lags so A2B2B3DSF1F2GoHHeJNQUZ: lagso L</a>&nbsp; 220.<a class="internt" name='N6307cn220' href='#FN6307cn220'> stsal B2B3DSF1F2HHeJLNQUZ: stsald A2Go</a>&nbsp; 221.<a class="internt" name='N6307cn221' href='#FN6307cn221'> shin tu A2DSHNF1F2JLUZQ: om. B2B3He: shind tu Go</a>&nbsp; 222.<a class="internt" name='N6307cn222' href='#FN6307cn222'> shing A2B2B3DSF1F2GoHHeJLQUN: shing | Z</a>&nbsp; 223.<a class="internt" name='N6307cn223' href='#FN6307cn223'> mig B2B3DSF1F2HHeJLQUN: mi Z: myig A2: r(?)myig Go</a>&nbsp; 224.<a class="internt" name='N6307cn224' href='#FN6307cn224'> tshugs su A2B2B3DSF1F2GoHHeJNQUZ: tshugsu L</a>&nbsp; 225.<a class="internt" name='N6307cn225' href='#FN6307cn225'> lta A2B2B3DSF2GoHeJLQUZ: blta HNF1</a>&nbsp; 226.<a class="internt" name='N6307cn226' href='#FN6307cn226'> la A2B2B3DGoSHHeJLNUZ: la | F2</a>&nbsp; 227.<a class="internt" name='N6307cn227' href='#FN6307cn227'> drang A2B2B3DSF2HHeJLU: brang N: bung Z: drang ba Go</a>&nbsp; 228.<a class="internt" name='N6307cn228' href='#FN6307cn228'> bsnyer B2B3DSHHeJLNUZ: snyed F2: bsnyerd A2Go</a>&nbsp; 229.<a class="internt" name='N6307cn229' href='#FN6307cn229'> te | DGoJU: te A2SF2HLN: te || Z: de B2B3He</a>&nbsp; 230.<a class="internt" name='N6307cn230' href='#FN6307cn230'> mig tshugs su lta la drang bsnyer te | skad cher zugs D: shing drag tu blta la | mche ba ston cing za bar byed F1Q</a>&nbsp; 231.<a class="internt" name='N6307cn231' href='#FN6307cn231'> om. A2B3DSHNF1F2GoHeJLUZQ: {gzu(deleted?)} B2</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962222bi' class='paragraph'>
+								gsol<a class='fotnote cn' name='FN6307cn232' href='#N6307cn232'><sup>232</sup></a>
+ pa |<a class='fotnote cn' name='FN6307cn233' href='#N6307cn233'><sup>233</sup></a>
+ de ’di<a class='fotnote cn' name='FN6307cn234' href='#N6307cn234'><sup>234</sup></a>
+ snyam du<a class='fotnote cn' name='FN6307cn235' href='#N6307cn235'><sup>235</sup></a>
+ sems te | bdag gi zas ro zhim po<a class='fotnote cn' name='FN6307cn236' href='#N6307cn236'><sup>236</sup></a>
+ ’di ’phrog pa zhig<a class='fotnote cn' name='FN6307cn237' href='#N6307cn237'><sup>237</sup></a>
+ go<a class='fotnote cn' name='FN6307cn238' href='#N6307cn238'><sup>238</sup></a>
+ snyam ste<a class='fotnote cn' name='FN6307cn239' href='#N6307cn239'><sup>239</sup></a>
+ | shin tu zugs<a class='fotnote cn' name='FN6307cn240' href='#N6307cn240'><sup>240</sup></a>
+ shing mig<a class='fotnote cn' name='FN6307cn241' href='#N6307cn241'><sup>241</sup></a>
+ tshugs su<a class='fotnote cn' name='FN6307cn242' href='#N6307cn242'><sup>242</sup></a>
+ lta<a class='fotnote cn' name='FN6307cn243' href='#N6307cn243'><sup>243</sup></a>
+ la<a class='fotnote cn' name='FN6307cn244' href='#N6307cn244'><sup>244</sup></a>
+ drang<a class='fotnote cn' name='FN6307cn245' href='#N6307cn245'><sup>245</sup></a>
+ bsnyer<a class='fotnote cn' name='FN6307cn246' href='#N6307cn246'><sup>246</sup></a>
+ te |<a class='fotnote cn' name='FN6307cn247' href='#N6307cn247'><sup>247</sup></a>
+ <a class='fotnote cn' name='FN6307cn248' href='#N6307cn248'><sup>248</sup></a>
+ skad cher zugs so<a class='fotnote cn' name='FN6307cn249' href='#N6307cn249'><sup>249</sup></a>
+ <a class='fotnote cn' name='FN6307cn250' href='#N6307cn250'><sup>250</sup></a>
+ ||&nbsp;</span></div><div style='' id='21' class='note cn'>232.<a class="internt" name='N6307cn232' href='#FN6307cn232'> gsol B2B3DSF1F2HHeJLNQUZ: gsold A2Go</a>&nbsp; 233.<a class="internt" name='N6307cn233' href='#FN6307cn233'> pa | A2DSF1HJLNU: pa B2B3F2GoHeQZ</a>&nbsp; 234.<a class="internt" name='N6307cn234' href='#FN6307cn234'> ’di B2B3DSF1F2GoHHeJLNQUZ: ci A2</a>&nbsp; 235.<a class="internt" name='N6307cn235' href='#FN6307cn235'> du B2B3DSF1F2GoHHeJLNQUZ: tu A2</a>&nbsp; 236.<a class="internt" name='N6307cn236' href='#FN6307cn236'> zhim po A2B2B3DSF2GoHHeJLNQUZ: ’thob par byed pa F1</a>&nbsp; 237.<a class="internt" name='N6307cn237' href='#FN6307cn237'> pa zhig A2B2B3DSF2GoHHeJLNQUZ: om. F1</a>&nbsp; 238.<a class="internt" name='N6307cn238' href='#FN6307cn238'> go A2B2B3DSF1F2HeJLNQUZ: go | GoH</a>&nbsp; 239.<a class="internt" name='N6307cn239' href='#FN6307cn239'> ste A2B2B3DSF2GoHHeJLNQUZ: nas F1</a>&nbsp; 240.<a class="internt" name='N6307cn240' href='#FN6307cn240'> zugs A2B2DSHNF1F2GoHeJLUZQ: gzugs B3</a>&nbsp; 241.<a class="internt" name='N6307cn241' href='#FN6307cn241'> mig B3DSF1F2HHeJLNQUZ: myig A2Go: migs B2</a>&nbsp; 242.<a class="internt" name='N6307cn242' href='#FN6307cn242'> tshugs su A2B2B3DSF1F2GoHHeJNQUZ: tshugsu L</a>&nbsp; 243.<a class="internt" name='N6307cn243' href='#FN6307cn243'> lta A2B2B3DF2HeJLQUZ: blta HNF1</a>&nbsp; 244.<a class="internt" name='N6307cn244' href='#FN6307cn244'> la A2B2B3DSF1F2HHeJLNQUZ: ba Go</a>&nbsp; 245.<a class="internt" name='N6307cn245' href='#FN6307cn245'> drang A2B2B3DF2GoHHeJLUZ: brang N</a>&nbsp; 246.<a class="internt" name='N6307cn246' href='#FN6307cn246'> bsnyer B2B3DSF1F2HHeJLNQUZ: bsnyerd A2Go</a>&nbsp; 247.<a class="internt" name='N6307cn247' href='#FN6307cn247'> te | A2B2B3DGoHeJLUZ: te F2HN</a>&nbsp; 248.<a class="internt" name='N6307cn248' href='#FN6307cn248'> skad cher zugs | gsol pa | de ’di snyam du sems te | bdag gi zas ro zhim po ’di ’phrog pa zhig go snyam ste | shin tu zugs shing mig tshugs su lta la drang bsnyer te | D: om. S</a>&nbsp; 249.<a class="internt" name='N6307cn249' href='#FN6307cn249'> 156 zugs so A2B2B3DSF1F2GoHHeJNQUZ: gzugso L</a>&nbsp; 250.<a class="internt" name='N6307cn250' href='#FN6307cn250'> mig tshugs su lta la drang bsnyer te | skad cher zugs so D: shing drag tu blta la mche ba ston par bgyid do F1Q</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962223bi' class='paragraph'>
+								bka’ stsal<a class='fotnote cn' name='FN6307cn251' href='#N6307cn251'><sup>251</sup></a>
+ pa | shā<a class='fotnote cn' name='FN6307cn252' href='#N6307cn252'><sup>252</sup></a>
+ ri’i bu<a class='fotnote cn' name='FN6307cn253' href='#N6307cn253'><sup>253</sup></a>
+ de bzhin du<a class='fotnote cn' name='FN6307cn254' href='#N6307cn254'><sup>254</sup></a>
+ gang khyim gyi ser sna la brtson<a class='fotnote cn' name='FN6307cn255' href='#N6307cn255'><sup>255</sup></a>
+ pa |<a class='fotnote cn' name='FN6307cn256' href='#N6307cn256'><sup>256</sup></a>
+ bshang ba dang |<a class='fotnote cn' name='FN6307cn257' href='#N6307cn257'><sup>257</sup></a>
+ gci<a class='fotnote cn' name='FN6307cn258' href='#N6307cn258'><sup>258</sup></a>
+ bas kun<a class='fotnote cn' name='FN6307cn259' href='#N6307cn259'><sup>259</sup></a>
+ tu bskor ba<a class='fotnote cn' name='FN6307cn260' href='#N6307cn260'><sup>260</sup></a>
+ la chags pa’i dge slong dag ’byung bar ’gyur<a class='fotnote cn' name='FN6307cn261' href='#N6307cn261'><sup>261</sup></a>
+ te | ’di lta bu’i dal ba phun sum tshogs pa rnyed<a class='fotnote cn' name='FN6307cn262' href='#N6307cn262'><sup>262</sup></a>
+ nas<a class='fotnote cn' name='FN6307cn263' href='#N6307cn263'><sup>263</sup></a>
+ des<a class='fotnote cn' name='FN6307cn264' href='#N6307cn264'><sup>264</sup></a>
+ chud zos par<a class='fotnote cn' name='FN6307cn265' href='#N6307cn265'><sup>265</sup></a>
+ byed pa<a class='fotnote cn' name='FN6307cn266' href='#N6307cn266'><sup>266</sup></a>
+ de dag ni<a class='fotnote cn' name='FN6307cn267' href='#N6307cn267'><sup>267</sup></a>
+ ngas<a class='fotnote cn' name='FN6307cn268' href='#N6307cn268'><sup>268</sup></a>
+ khyi dang ’dra’o<a class='fotnote cn' name='FN6307cn269' href='#N6307cn269'><sup>269</sup></a>
+ zhes brjod<a class='fotnote cn' name='FN6307cn270' href='#N6307cn270'><sup>270</sup></a>
+ de<a class='fotnote cn' name='FN6307cn271' href='#N6307cn271'><sup>271</sup></a>
+ | de dag<a class='fotnote cn' name='FN6307cn272' href='#N6307cn272'><sup>272</sup></a>
+ ’ba’ zhig gi<a class='fotnote cn' name='FN6307cn273' href='#N6307cn273'><sup>273</sup></a>
+ phyir<a class='fotnote cn' name='FN6307cn274' href='#N6307cn274'><sup>274</sup></a>
+ de bzhin gshegs pa ’di lta bu’i<a class='fotnote cn' name='FN6307cn275' href='#N6307cn275'><sup>275</sup></a>
+ brjod pa’i gnas byed pa ma<a class='fotnote cn' name='FN6307cn276' href='#N6307cn276'><sup>276</sup></a>
+ yin gyi |&nbsp;</span></div><div style='' id='22' class='note cn'>251.<a class="internt" name='N6307cn251' href='#FN6307cn251'> stsal B2B3DSF1F2HHeJLNQUZ: stsald A2Go</a>&nbsp; 252.<a class="internt" name='N6307cn252' href='#FN6307cn252'> shā B2B3DSF1HHeJNQU: shi F2: sha A2GoLZ</a>&nbsp; 253.<a class="internt" name='N6307cn253' href='#FN6307cn253'> bu A2B2B3DSF1F2GoHeJLNQUZ: bu | H</a>&nbsp; 254.<a class="internt" name='N6307cn254' href='#FN6307cn254'> du B2B3DSF1F2GoHHeJLNUZ: du | Q: tu A2</a>&nbsp; 255.<a class="internt" name='N6307cn255' href='#FN6307cn255'> brtson A2DSF1GoHJLNQUZ: rtson B2B3F2He</a>&nbsp; 256.<a class="internt" name='N6307cn256' href='#FN6307cn256'> pa | B2B3DSF2GoHHeJQUZ: par F1: pa A2LN</a>&nbsp; 257.<a class="internt" name='N6307cn257' href='#FN6307cn257'> dang | A2B2B3DF1HHeJLNUZ: dang SF2GoQ</a>&nbsp; 258.<a class="internt" name='N6307cn258' href='#FN6307cn258'> gci A2B2B3DSF2HHeJNQUZ: lci F1: gci’ Go: ci L</a>&nbsp; 259.<a class="internt" name='N6307cn259' href='#FN6307cn259'> kun B2B3DSF1F2HHeJLNQUZ: kund A2Go</a>&nbsp; 260.<a class="internt" name='N6307cn260' href='#FN6307cn260'> bskor ba B2B3DSF1F2HHeJLNQUZ: bskord pa A2Go</a>&nbsp; 261.<a class="internt" name='N6307cn261' href='#FN6307cn261'> ’gyur A2B2B3DSF1F2HHeJLNQUZ: ’gyurd Go</a>&nbsp; 262.<a class="internt" name='N6307cn262' href='#FN6307cn262'> phun sum tshogs pa rnyed A2B2B3DSF2GoHHeJLNU: ’byor F1Q: phun gsum tshogs pa rnyed Z</a>&nbsp; 263.<a class="internt" name='N6307cn263' href='#FN6307cn263'> nas B2B3DF1F2JHHeU: nas | A2GoLSNQZ</a>&nbsp; 264.<a class="internt" name='N6307cn264' href='#FN6307cn264'> des A2DF2GoHLJNZ: om. B2B3F1HeSQ: de la U</a>&nbsp; 265.<a class="internt" name='N6307cn265' href='#FN6307cn265'> chud zos par A2B2B3DSF2GoHHeJLNUZ: stor bar F1: stong bar Q</a>&nbsp; 266.<a class="internt" name='N6307cn266' href='#FN6307cn266'> pa A2B2B3DSF1F2HHeJLNQUZ: par Go</a>&nbsp; 267.<a class="internt" name='N6307cn267' href='#FN6307cn267'> ni A2B2B3DSF1F2HeJNUZ: ni | HLQ: gi Go</a>&nbsp; 268.<a class="internt" name='N6307cn268' href='#FN6307cn268'> ngas A2B2B3DSF1F2HHeJLNQUZ: om. Go</a>&nbsp; 269.<a class="internt" name='N6307cn269' href='#FN6307cn269'> ’dra’o B2B3DSF1F2GoHeJLNQUZ: ’dra’o | H: ’tra’o A2</a>&nbsp; 270.<a class="internt" name='N6307cn270' href='#FN6307cn270'> brjod A2B2B3DSF2GoHHeJLNUZ: bshad F1Q</a>&nbsp; 271.<a class="internt" name='N6307cn271' href='#FN6307cn271'> de A2DSHNF1F2GoJLUZQ: do B2B3He</a>&nbsp; 272.<a class="internt" name='N6307cn272' href='#FN6307cn272'> om. A2B2B3DSF1F2HHeJLNQUZ: la Go</a>&nbsp; 273.<a class="internt" name='N6307cn273' href='#FN6307cn273'> gi A2B2B3DSF1F2GoHHeJNQUZ: gis L</a>&nbsp; 274.<a class="internt" name='N6307cn274' href='#FN6307cn274'> om. B2B3DSF1F2HHeJLNQUZ: | A2Go</a>&nbsp; 275.<a class="internt" name='N6307cn275' href='#FN6307cn275'> bu’i A2B2B3DSF1GoHHeJLNQU: ba’i F2: bu Z</a>&nbsp; 276.<a class="internt" name='N6307cn276' href='#FN6307cn276'> ma A2B2B3DSF1GoHHeJLNQUZ: om. F2</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'><div class='Tibetan'><span id='8962224bi' class='paragraph'>
+								yang shā ri’i bu<a class='fotnote cn' name='FN6307cn277' href='#N6307cn277'><sup>277</sup></a>
+ byang chub sems dpa’ sems dpa’ chen<a class='fotnote cn' name='FN6307cn278' href='#N6307cn278'><sup>278</sup></a>
+ po gang dag<a class='fotnote cn' name='FN6307cn279' href='#N6307cn279'><sup>279</sup></a>
+ skye bo mang po la phan pa dang | skye bo mang po la bde ba’i phyir<a class='fotnote cn' name='FN6307cn280' href='#N6307cn280'><sup>280</sup></a>
+ sangs rgyas kyi ye shes tshol<a class='fotnote cn' name='FN6307cn281' href='#N6307cn281'><sup>281</sup></a>
+ ba de dag ni<a class='fotnote cn' name='FN6307cn282' href='#N6307cn282'><sup>282</sup></a>
+ bdag gi sha yang<a class='fotnote cn' name='FN6307cn283' href='#N6307cn283'><sup>283</sup></a>
+ yongs su gtong na<a class='fotnote cn' name='FN6307cn284' href='#N6307cn284'><sup>284</sup></a>
+ gzhan gyi khyim la rtog cing bsnyen<a class='fotnote cn' name='FN6307cn285' href='#N6307cn285'><sup>285</sup></a>
+ pa’i phyir<a class='fotnote cn' name='FN6307cn286' href='#N6307cn286'><sup>286</sup></a>
+ phrag dog dang<a class='fotnote cn' name='FN6307cn287' href='#N6307cn287'><sup>287</sup></a>
+ ser sna byed par mi<a class='fotnote cn' name='FN6307cn288' href='#N6307cn288'><sup>288</sup></a>
+ ’gyur ba lta<a class='fotnote cn' name='FN6307cn289' href='#N6307cn289'><sup>289</sup></a>
+ ci<a class='fotnote cn' name='FN6307cn290' href='#N6307cn290'><sup>290</sup></a>
+ smos |<a class='fotnote cn' name='FN6307cn291' href='#N6307cn291'><sup>291</sup></a>
+ yang shā<a class='fotnote cn' name='FN6307cn292' href='#N6307cn292'><sup>292</sup></a>
+ ri’i bu<a class='fotnote cn' name='FN6307cn293' href='#N6307cn293'><sup>293</sup></a>
+ skyes bu<a class='fotnote cn' name='FN6307cn294' href='#N6307cn294'><sup>294</sup></a>
+ gti mug<a class='fotnote cn' name='FN6307cn295' href='#N6307cn295'><sup>295</sup></a>
+ de dag<a class='fotnote cn' name='FN6307cn296' href='#N6307cn296'><sup>296</sup></a>
+ ’tsho ba’i phyir<a class='fotnote cn' name='FN6307cn297' href='#N6307cn297'><sup>297</sup></a>
+ <a class='fotnote cn' name='FN6307cn298' href='#N6307cn298'><sup>298</sup></a>
+ zang zing<a class='fotnote cn' name='FN6307cn299' href='#N6307cn299'><sup>299</sup></a>
+ dang |<a class='fotnote cn' name='FN6307cn300' href='#N6307cn300'><sup>300</sup></a>
+ bran dang<a class='fotnote cn' name='FN6307cn301' href='#N6307cn301'><sup>301</sup></a>
+ ’jig rten gyi zang zing lhur<a class='fotnote cn' name='FN6307cn302' href='#N6307cn302'><sup>302</sup></a>
+ byed cing<a class='fotnote cn' name='FN6307cn303' href='#N6307cn303'><sup>303</sup></a>
+ zas dang |<a class='fotnote cn' name='FN6307cn304' href='#N6307cn304'><sup>304</sup></a>
+ srog<a class='fotnote cn' name='FN6307cn305' href='#N6307cn305'><sup>305</sup></a>
+ la<a class='fotnote cn' name='FN6307cn306' href='#N6307cn306'><sup>306</sup></a>
+ lhur<a class='fotnote cn' name='FN6307cn307' href='#N6307cn307'><sup>307</sup></a>
+ byed pa |<a class='fotnote cn' name='FN6307cn308' href='#N6307cn308'><sup>308</sup></a>
+ rtog cing <a class='fotnote cn' name='FN6307cn309' href='#N6307cn309'><sup>309</sup></a>
+bsnyen<a class='fotnote cn' name='FN6307cn310' href='#N6307cn310'><sup>310</sup></a>
+ pa’i phyir<a class='fotnote cn' name='FN6307cn311' href='#N6307cn311'><sup>311</sup></a>
+ gzhan gyi khyim<a class='fotnote cn' name='FN6307cn312' href='#N6307cn312'><sup>312</sup></a>
+ la phrag<a class='fotnote cn' name='FN6307cn313' href='#N6307cn313'><sup>313</sup></a>
+ dog dang |<a class='fotnote cn' name='FN6307cn314' href='#N6307cn314'><sup>314</sup></a>
+ ser sna skyed par ’gyur<a class='fotnote cn' name='FN6307cn315' href='#N6307cn315'><sup>315</sup></a>
+ te |&nbsp;</span></div><div style='' id='23' class='note cn'>277.<a class="internt" name='N6307cn277' href='#FN6307cn277'> bu gang F1Q: bu A2B2B3DSF2GoHeJLNUZ: bu | H</a>&nbsp; 278.<a class="internt" name='N6307cn278' href='#FN6307cn278'> chen A2B2B3DSF1GoHHeJLNQUZ: chos F2</a>&nbsp; 279.<a class="internt" name='N6307cn279' href='#FN6307cn279'> gang dag A2B2B3DSF2HHeJLNUZ: om. F1Q: skyes bo gang dag Go</a>&nbsp; 280.<a class="internt" name='N6307cn280' href='#FN6307cn280'> phyir A2B2B3DGoHHeJNUZ: phyir | SF1F2LQ</a>&nbsp; 281.<a class="internt" name='N6307cn281' href='#FN6307cn281'> tshol A2B2B3DSF1F2GoJLNHQUZ: ’tshol He</a>&nbsp; 282.<a class="internt" name='N6307cn282' href='#FN6307cn282'> ni A2B2B3DSF1GoHeJLNUZ: ni | F2HQ</a>&nbsp; 283.<a class="internt" name='N6307cn283' href='#FN6307cn283'> yang A2B2B3DF1F2HHeJLNQUZ: ’ang S: om. Go</a>&nbsp; 284.<a class="internt" name='N6307cn284' href='#FN6307cn284'> na A2B2B3DHeJU: na | SF2HNF1GoLQZ</a>&nbsp; 285.<a class="internt" name='N6307cn285' href='#FN6307cn285'> bsnyen A2B2B3DSF1F2HHeJLNQU: brnyed Z: bsnyend Go</a>&nbsp; 286.<a class="internt" name='N6307cn286' href='#FN6307cn286'> phyir B2B3DSF2GoHHeJNUZ: phyir | A2F1LQ</a>&nbsp; 287.<a class="internt" name='N6307cn287' href='#FN6307cn287'> dang B2B3DSF1F2GoHeJLNQU: dang | A2HZ</a>&nbsp; 288.<a class="internt" name='N6307cn288' href='#FN6307cn288'> mi B2B3DSF1F2HHeJLNQUZ: myi A2Go</a>&nbsp; 289.<a class="internt" name='N6307cn289' href='#FN6307cn289'> ba lta A2B2B3DSF1F2GoJLNHUZ: blta HeQ</a>&nbsp; 290.<a class="internt" name='N6307cn290' href='#FN6307cn290'> ci A2B2B3DSF1GoHHeJLUZ: cing F2: ji Q</a>&nbsp; 291.<a class="internt" name='N6307cn291' href='#FN6307cn291'> om. DF1F2HJQU: | || bam po bcu bzhi pa || SN: | dkon mchog brtsegs pa chen po’i mdo || bam po bcu bzhi pa || || B2B3: | || dkon mchog brtsegs pa chen po’i mdo || || bam po bcu mzhi pa’o || || Z: | bam po bcu bzhi pa’o || || || A2: | || dkon mchog brtsegs pa chen poʼi mdo’ bam po bcu bzhi pa’o || || Go: dkon mchog brtsegs pa chen po’i mdo || ~ || bam po bcu bzhi pa || ~ || He: ’phags pa dkon mchog brtsegs pa chen po’i chos kyi rnam grangs ste nga phrag brgya pa | bam po bcu bzhi pa || L</a>&nbsp; 292.<a class="internt" name='N6307cn292' href='#FN6307cn292'> shā B2B3DSF1HHeJNQU: sha A2F2GoLZ</a>&nbsp; 293.<a class="internt" name='N6307cn293' href='#FN6307cn293'> bu A2B2B3DSF1F2GoHeJLNQUZ: bu | H</a>&nbsp; 294.<a class="internt" name='N6307cn294' href='#FN6307cn294'> skyes bu B2B3DSF1F2GoHJLNQUZ: om. A2</a>&nbsp; 295.<a class="internt" name='N6307cn295' href='#FN6307cn295'> gti mug A2DSF1F2GoJNQUH: gti mug can B2B3HeZ: gti mug pa L</a>&nbsp; 296.<a class="internt" name='N6307cn296' href='#FN6307cn296'> dag A2DSF1HJNQU: dga’ F2: dag ni B2B3GoHeZ: dag ni | L</a>&nbsp; 297.<a class="internt" name='N6307cn297' href='#FN6307cn297'> phyir B2B3DSF2GoHJLNQUZ: phyir | A2F1He</a>&nbsp; 298.<a class="internt" name='N6307cn298' href='#FN6307cn298'> om. A2DSHNF1F2GoJLUZQ: de dag ni ’tshol ba’i phyir || B2B3He</a>&nbsp; 299.<a class="internt" name='N6307cn299' href='#FN6307cn299'> zang zing A2B2B3DSF1F2GoHHeJLNQU: zing zing Z</a>&nbsp; 300.<a class="internt" name='N6307cn300' href='#FN6307cn300'> dang | A2B2B3DSF2GoHHeJQUZ: om. F1L: dang N</a>&nbsp; 301.<a class="internt" name='N6307cn301' href='#FN6307cn301'> dang DF2GoJU: dang | A2B2B3SF1HHeLNQZ</a>&nbsp; 302.<a class="internt" name='N6307cn302' href='#FN6307cn302'> lhur A2B2B3DSF2GoHHeJLNUZ: grtso bor F1Q</a>&nbsp; 303.<a class="internt" name='N6307cn303' href='#FN6307cn303'> cing DGoHJNU: cing | A2B2B3SF1F2HeLQZ</a>&nbsp; 304.<a class="internt" name='N6307cn304' href='#FN6307cn304'> dang | DHJU: dang A2B2B3SF1F2HeLNQ: om. GoZ</a>&nbsp; 305.<a class="internt" name='N6307cn305' href='#FN6307cn305'> srog A2B2B3DSF1F2HHeJLNUQ: lus srog GoZ</a>&nbsp; 306.<a class="internt" name='N6307cn306' href='#FN6307cn306'> la A2B2B3DSHF1F2GoHeJLQUZ: om. N</a>&nbsp; 307.<a class="internt" name='N6307cn307' href='#FN6307cn307'> lhur A2B2B3DSF2GoHHeJLNUZ: mchog tu F1Q</a>&nbsp; 308.<a class="internt" name='N6307cn308' href='#FN6307cn308'> pa | DHJNUZ: pa A2B2B3SF2GoLHeQ: par F1</a>&nbsp; 309.<a class="internt" name='N6307cn309' href='#FN6307cn309'> om. A2DSHNF1F2GoJLUZQ: | zas dang srog la lhur byed pa rtog cing B2B3He</a>&nbsp; 310.<a class="internt" name='N6307cn310' href='#FN6307cn310'> bsnyen DSF1F2HJLNUQ: brnyen Z: bsnyend A2Go: bsnyer B2B3He</a>&nbsp; 311.<a class="internt" name='N6307cn311' href='#FN6307cn311'> phyir B3DGoHJU: phyir | A2B2SF1F2HeLNQZ</a>&nbsp; 312.<a class="internt" name='N6307cn312' href='#FN6307cn312'> khyim A2B2B3DSHF1F2GoHeJLQUZ: khyim dag N</a>&nbsp; 313.<a class="internt" name='N6307cn313' href='#FN6307cn313'> phrag A2B2B3DSF1GoHHeJLNQUZ: phra F2</a>&nbsp; 314.<a class="internt" name='N6307cn314' href='#FN6307cn314'> dang | DHJLUZ: dang A2B2B3SF1F2GoHeNQ</a>&nbsp; 315.<a class="internt" name='N6307cn315' href='#FN6307cn315'> ’gyur B2B3DSF1F2HHeJLNQUZ: ’gyurd A2Go</a>&nbsp; </div><div class='clear'></div>					<script language="javascript" type="text/javascript">
+
+						tekstid = "";
+						kilderef = "   - Bspṭ tib (BMSC IV) Prose, section 11";
+						$('#'+tekstid).text(kilderef);
+						</script>
+				</div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:50%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=863c822f-2655-11e5-99e8-001cc4ddf0f4</div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

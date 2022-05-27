@@ -1,0 +1,23 @@
+id: IEAED95AE
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T16:41:54.859056'
+last_modified: '2022-05-27T16:41:54.859067'
+parser: null
+source_metadata:
+  title: 'RK: Bodhisatvapiṭaka, BMSC IV, Tibetan'
+  language: bo
+  base:
+    f48BD:
+      title: Complete text
+      base_file: f48BD.txt
+      order: 1
+  chapter_to_tile: {}
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

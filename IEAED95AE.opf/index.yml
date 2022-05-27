@@ -1,0 +1,9 @@
+id: 06d0a30e2635459080a44373bee40293
+annotation_type: index
+revision: '00001'
+annotations:
+  90edafcab1694ee4aaf96d887532d907:
+    base: f48BD.txt
+    span:
+      start: 0
+      end: 4748
